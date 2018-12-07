@@ -81,7 +81,7 @@
                 if (e instanceof Element) {
                     result += dom2efml(e);
                 } else {
-                    popup('warn', "There are non-element node(s) didn't handled by dom2efml");
+                    popup('warn', "There are non-element node(s) couldn't handled by this converter");
                 }
             });
             userOutput.value = result;
