@@ -1,4 +1,5 @@
 (function() {
+    'use strict';
     function dom2efml(e, ref) {
         if (ref === undefined) {
             ref = {};
