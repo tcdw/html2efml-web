@@ -94,6 +94,76 @@ body {
     border-radius: 0.4em;
 }
 
+.field .message {
+    position: relative;
+    background-color: #666;
+    color: #fff;
+    font-weight: 700
+}
+
+.field .message .content {
+    padding: .5em .8em;
+    line-height: 2em;
+    width: calc(100% - 3em);
+    box-sizing: border-box
+}
+
+.field .message .close-btn {
+    all: unset;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3em;
+    height: 3em;
+    text-align: center;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color .2s
+}
+
+.field .message .close-btn:focus {
+    background-color: rgba(0, 0, 0, .2)
+}
+
+.field .message .close-btn svg {
+    width: 1em
+}
+
+.field .message .close-btn svg path {
+    fill: #fff
+}
+
+.field .message.success {
+    background-color: #43a047
+}
+
+.field .message.info {
+    background-color: #1e88e5
+}
+
+.field .message.error {
+    background-color: #f44336
+}
+
+.field .message.warn {
+    background-color: #ffeb3b;
+    color: #0a0a0a
+}
+
+.field .message.warn .close-btn svg {
+    width: 1em
+}
+
+.field .message.warn .close-btn svg path {
+    fill: #000
+}
+
 /* https://github.com/tholman/github-corners */
 
 .github-corner:hover .octo-arm {
