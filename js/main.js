@@ -48,7 +48,7 @@
                     }
                     case Node.TEXT_NODE: {
                         if (!ignoreEmptyTextNode || e.textContent.trim() !== '') {
-                            output += (spaces.repeat(indent + 1)) + "." + (e.textContent) + "\n";
+                            output += (spaces.repeat(indent + 1)) + "." + (e.textContent.replace(/\n/g, '&n')) + "\n";
                         }
                         break;
                     }
