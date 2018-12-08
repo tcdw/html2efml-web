@@ -77,13 +77,15 @@
             var result = '';
             var parser = new DOMParser();
             var data = parser.parseFromString(userInput.value, 'text/html');
-            Array.prototype.forEach.call(data.body.childNodes, function loop(e) {
+            function loop(e) {
                 if (e instanceof Element) {
                     result += dom2efml(e);
                 } else {
                     popup('warn', "There are non-element node(s) couldn't handled by this converter");
                 }
-            });
+            };
+            Array.prototype.forEach.call(data.head.childNodes, loop);
+            Array.prototype.forEach.call(data.body.childNodes, loop);
             userOutput.value = result;
         } catch (e) {
             popup('error', e);
